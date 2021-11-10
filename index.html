@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>
+Assigment    
+</title>
+</head>
+<body>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-10 m-auto bg-light p-5"> <!--margin kay liye-->
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h1>Assignment<h1>
+                    <h4>Api Frontend</h4>                            
+                    <h7>Develop by Zeeshan Haider</h7>                            
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="d-flex">
+                <div style="width: 30%;">
+                    <h4>Student Information</h4>
+                </div>
+            </div>
+            <hr class="my-2">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="add_num1">Student Name</label>
+                    <input type="text" class="form-control" id="student_name">
+                </div>
+                <div class="col-md-6">
+                    <label for="add_num2">Father Name</label>
+                    <input type="text" class="form-control" id="father_name">
+                </div>
+                <div class="col-md-6">
+                    <label for="add_num2">Age</label>
+                    <input type="text" class="form-control" id="age">
+                </div>
+                <div class="col-md-6">
+                    <label for="add_num2">Roll No</label>
+                    <input type="text" class="form-control" id="roll_no">
+                    <input type="hidden" class="form-control" id="student_id">
+                </div>
+            </div>
+            <div class="row">
+                <div class="modal-footer">
+                    <button class="btn btn-primary" style="margin-top: 30px;" onclick="post_create();">Create Post Request</button>
+                    <button class="btn btn-success" style="margin-top: 30px;" onclick="get_all();">Get All Student</button>
+                    <button class="btn btn-warning" style="margin-top: 30px;" onclick="update_student();">Update Student</button>
+                    <button class="btn btn-danger" style="margin-top: 30px;" onclick="delete_student();">Delete Student</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" id="Divusers">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th>Student Name</th>
+                            <th>Father Name</th>
+                            <th>Age</th>
+                            <th>Roll No</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody  id="tblper">
+                        </tbody>                            
+                    </table>
+                </div>               
+            </div>
+            <hr class="my-4">
+            <div class="d-flex">
+                <div style="width: 30%;">
+                    <h3>Weather App</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="add_num2">City</label>
+                    <select class="form-control" id="city_id">
+                       
+                    </select>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="modal-footer">
+                    <button class="btn btn-primary" style="margin-top: 30px;" onclick="getWeather();">Check Weather</button>
+                </div>
+            </div>
+            <fieldset style="font-size: large;font-weight: bold;">
+                Temp :   <label id="temp"></label>
+                <br>
+                Description :   <label id="description"></label>
+                <br>
+                Feels Like :   <label id="feels_like"></label>
+                <br>
+                Humidity :   <label id="humidity"></label>                
+            </fieldset>
+        </div>
+    </div>
+</div>
+</body>
+<script src="operator.js"></script>
+</html>
